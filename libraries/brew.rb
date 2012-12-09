@@ -32,7 +32,7 @@ class Chef::Recipe
   end
 
   def brew_tap(package)
-    brew do
+    brew package do
       action :tap
     end
   end

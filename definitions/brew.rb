@@ -52,7 +52,7 @@ define :brew, :action => :install do
       command "brew update"
     end
   when :tap
-    execute "brew tap" do
+    execute "brew tap #{package}" do
       only_if params[:only_if] if params[:only_if]
       not_if params[:not_if] if params[:not_if]
       user params[:user] || WS_USER
