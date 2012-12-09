@@ -30,4 +30,11 @@ class Chef::Recipe
       action :update
     end
   end
+
+  def brew_tap(package)
+    brew do
+      action :tap
+    end
+  end
+
 end

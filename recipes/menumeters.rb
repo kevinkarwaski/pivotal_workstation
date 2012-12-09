@@ -59,11 +59,11 @@ unless File.exists?(menu_meters_dst)
   end
 
   # My preferences: more history graphs.  Delete this stanza if you want to go with the defaults.
-  plist_path = File.expand_path('com.ragingmenace.MenuMeters.plist', File.join(WS_HOME, 'Library', 'Preferences'))
-  template plist_path do
-    source "com.ragingmenace.MenuMeters.plist.erb"
-    owner WS_USER
-  end
+ # plist_path = File.expand_path('com.ragingmenace.MenuMeters.plist', File.join(WS_HOME, 'Library', 'Preferences'))
+ # template plist_path do
+ #   source "com.ragingmenace.MenuMeters.plist.erb"
+ #   owner WS_USER
+ # end
 
   execute "Restart SystemUIServer" do
     command 'killall -HUP SystemUIServer'
